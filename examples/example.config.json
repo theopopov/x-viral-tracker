@@ -1,0 +1,87 @@
+{
+  "_comment": "x-viral-tracker config. Copy this file to config.json and edit it. Tune everything here; never edit tracker.py to change behavior. All values below are NEUTRAL EXAMPLES — replace queries/niche_terms with your own topic.",
+
+  "apify": {
+    "_comment": "Two interchangeable actors return the same tweet schema. Default is kaito: it has no free-tier per-run cap and is the cheapest. apidojo~tweet-scraper is the best-documented alternative but caps output at ~10 items/run on the FREE Apify plan. To switch: set actor to 'apidojo~tweet-scraper' and actor_price_per_tweet_usd to 0.0004. Put your token in the APIFY_TOKEN env var (see .env.example) — do NOT paste it here.",
+    "actor": "kaitoeasyapi~twitter-x-data-tweet-scraper-pay-per-result-cheapest",
+    "actor_price_per_tweet_usd": 0.00025,
+    "token_env": "APIFY_TOKEN"
+  },
+
+  "acquire": {
+    "_comment": "Cost levers: max_items caps the bill (max_items * actor_price_per_tweet_usd). minimum_favorites is a SERVER-SIDE filter so you never pay for dead posts. freshness_days bounds the time window. queries are X/Twitter search strings — the tool appends 'lang:<language> since:<date> min_faves:<minimum_favorites>' to each. Replace the example queries below with phrases from YOUR niche.",
+    "sort": "Top",
+    "language": "en",
+    "freshness_days": 7,
+    "minimum_favorites": 5,
+    "max_items": 300,
+    "_queries_comment": "EXAMPLES ONLY — these are generic 'something new happened' queries. Precision comes from naming specific terms/incumbents in your niche. Widen recall by adding broad catch-all queries; raise precision by naming specific products, people, or keywords. Use standard X search operators (quotes for phrases, OR, parentheses).",
+    "queries": [
+      "\"just launched\"",
+      "\"just shipped\"",
+      "\"now open source\"",
+      "\"just open-sourced\"",
+      "\"Show HN\""
+    ]
+  },
+
+  "relevance_gate": {
+    "_comment": "A cheap keyword pre-gate. A post is kept if it satisfies require_any_of. has_github_link=true keeps any post containing a github.com link (useful when tracking open-source tools; set false to disable). niche_terms is a substring OR-list — a post is kept if its text contains any of them. Replace these with YOUR topic keywords.",
+    "require_any_of": {
+      "has_github_link": true,
+      "niche_terms": [
+        "open source", "open-source", "self-host", "self-hosted", "self-hostable",
+        "repo", "github", "just shipped", "just launched", "released", "alternative to"
+      ]
+    }
+  },
+
+  "suppress_terms": [
+    "game-changer", "game changer", "revolutionary", "10x your growth", "growth hack", "silver bullet",
+    "secret sauce", "unlock exponential", "disrupt", "must-have tool", "you won't believe", "insane results",
+    "crushing it", "to the moon", "limited spots", "don't miss out", "comment word", "repost for access",
+    "dm me", "link in bio"
+  ],
+  "suppress_penalty": 0.5,
+  "_suppress_comment": "suppress_penalty multiplies the score of a post that uses hype language. Flagged, not deleted, so you still see it (brand_flags in the output). Lower the penalty to be harsher. These terms are topic-neutral quality filters; extend for your niche.",
+
+  "virality": {
+    "_comment": "Composite score = weighted sum of each signal normalized to the pull's median (ratio-to-median, capped at normalization_cap), times an age-decay factor. Weights emphasize velocity, spread (reposts/quotes), and bookmarks. reply_like_pivot is the reply/like ratio treated as 'discussion-heavy' (used to normalize the reply_quality term).",
+    "weights": {
+      "velocity": 0.30,
+      "bookmark_rate": 0.20,
+      "reach_ratio": 0.20,
+      "spread": 0.15,
+      "engagement_rate": 0.10,
+      "reply_quality": 0.05
+    },
+    "normalization_cap": 5.0,
+    "age_decay_half_life_hours": 36,
+    "reply_like_pivot": 0.15,
+    "author_tier_bands": {
+      "nano":  [0, 2000],
+      "micro": [2000, 10000],
+      "mid":   [10000, 50000],
+      "macro": [50000, 200000],
+      "mega":  [200000, 100000000]
+    }
+  },
+
+  "baseline": {
+    "_comment": "If calibrated:true, these medians normalize scoring across runs (a stable bar). If false, the tracker self-normalizes to the current pull's median (a good cold-start default). Run: python3 tracker.py --calibrate  to populate these from a larger sample of your niche.",
+    "calibrated": false,
+    "reach_ratio_median": null,
+    "engagement_rate_median": null,
+    "velocity_median": null,
+    "bookmark_rate_median": null,
+    "spread_median": null
+  },
+
+  "output": {
+    "_top_n_comment": "0 = emit EVERY relevance-gated unique drop (virality is only a sort key). Set a positive N to cap how many candidates each run emits.",
+    "top_n": 0,
+    "dir": "out",
+    "seen_ledger": "seen.json",
+    "profile": "x_viral_tracker"
+  }
+}

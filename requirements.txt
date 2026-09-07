@@ -1,0 +1,7 @@
+# x-viral-tracker has NO third-party dependencies.
+# It runs on the Python 3 standard library only (json, os, sys, re, urllib, datetime).
+#
+# Requires: Python >= 3.8
+#
+# There is nothing to `pip install`. This file exists to make that explicit and to
+# satisfy tooling that expects a dependency manifest.

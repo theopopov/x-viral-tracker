@@ -1,0 +1,204 @@
+{
+  "generated_at": "20260907_082627",
+  "count": 5,
+  "profile": "x_viral_tracker",
+  "candidates": [
+    {
+      "score": 1.432,
+      "score_raw": 2.2385,
+      "age_decay": 0.64,
+      "top_drivers": [
+        "reach_ratio",
+        "bookmarks"
+      ],
+      "author_tier": "micro",
+      "url": "https://x.com/ada_builds/status/1000000000000000001",
+      "author_handle": "ada_builds",
+      "author_followers": 3200,
+      "author_verified": true,
+      "posted_at": "Sun Sep 06 09:15:00 +0000 2026",
+      "age_hours": 23.2,
+      "text": "Just shipped v1.0 of Flowgate \u2014 an open source, self-hosted workflow engine. No API key, runs anywhere. github.com/acme-labs/flowgate",
+      "metrics": {
+        "views": 41000,
+        "likes": 1200,
+        "reposts": 180,
+        "replies": 40,
+        "quotes": 22,
+        "bookmarks": 900
+      },
+      "signals": {
+        "reach_ratio": 12.8125,
+        "engagement_rate": 0.0352,
+        "velocity": 62.1792,
+        "reply_like_ratio": 0.0333,
+        "quote_repost_ratio": 0.1222,
+        "bookmark_rate": 0.022,
+        "spread": 202
+      },
+      "repo_url": "https://github.com/acme-labs/flowgate",
+      "dedup_key": "github.com/acme-labs/flowgate",
+      "brand_flags": [],
+      "other_source_urls": [
+        "https://x.com/maker_lee/status/1000000000000000004"
+      ]
+    },
+    {
+      "score": 1.4058,
+      "score_raw": 2.0583,
+      "age_decay": 0.683,
+      "top_drivers": [
+        "reach_ratio",
+        "bookmarks"
+      ],
+      "author_tier": "nano",
+      "url": "https://x.com/devninja_sam/status/1000000000000000002",
+      "author_handle": "devninja_sam",
+      "author_followers": 850,
+      "author_verified": false,
+      "posted_at": "Sun Sep 06 12:40:00 +0000 2026",
+      "age_hours": 19.8,
+      "text": "We open-sourced our internal analytics stack today. Self-hosted, MIT licensed. github.com/nimbus-oss/pulse-analytics",
+      "metrics": {
+        "views": 28000,
+        "likes": 640,
+        "reposts": 210,
+        "replies": 18,
+        "quotes": 30,
+        "bookmarks": 540
+      },
+      "signals": {
+        "reach_ratio": 32.9412,
+        "engagement_rate": 0.0321,
+        "velocity": 45.4124,
+        "reply_like_ratio": 0.0281,
+        "quote_repost_ratio": 0.1429,
+        "bookmark_rate": 0.0193,
+        "spread": 240
+      },
+      "repo_url": "https://github.com/nimbus-oss/pulse-analytics",
+      "dedup_key": "github.com/nimbus-oss/pulse-analytics",
+      "brand_flags": [],
+      "other_source_urls": []
+    },
+    {
+      "score": 0.3767,
+      "score_raw": 0.9475,
+      "age_decay": 0.398,
+      "top_drivers": [
+        "reach_ratio",
+        "bookmarks"
+      ],
+      "author_tier": "mid",
+      "url": "https://x.com/oss_oliver/status/1000000000000000006",
+      "author_handle": "oss_oliver",
+      "author_followers": 14000,
+      "author_verified": true,
+      "posted_at": "Sat Sep 05 08:30:00 +0000 2026",
+      "age_hours": 47.9,
+      "text": "Show HN: I built a self-hosted alternative to expensive SaaS dashboards. Feedback welcome. github.com/lumen-tools/dashkit",
+      "metrics": {
+        "views": 33000,
+        "likes": 800,
+        "reposts": 160,
+        "replies": 90,
+        "quotes": 25,
+        "bookmarks": 410
+      },
+      "signals": {
+        "reach_ratio": 2.3571,
+        "engagement_rate": 0.0326,
+        "velocity": 22.4234,
+        "reply_like_ratio": 0.1125,
+        "quote_repost_ratio": 0.1562,
+        "bookmark_rate": 0.0124,
+        "spread": 185
+      },
+      "repo_url": "https://github.com/lumen-tools/dashkit",
+      "dedup_key": "github.com/lumen-tools/dashkit",
+      "brand_flags": [],
+      "other_source_urls": []
+    },
+    {
+      "score": 0.3259,
+      "score_raw": 1.3917,
+      "age_decay": 0.468,
+      "top_drivers": [
+        "velocity",
+        "spread"
+      ],
+      "author_tier": "macro",
+      "url": "https://x.com/cloud_carla/status/1000000000000000003",
+      "author_handle": "cloud_carla",
+      "author_followers": 120000,
+      "author_verified": true,
+      "posted_at": "Sat Sep 05 17:05:00 +0000 2026",
+      "age_hours": 39.4,
+      "text": "This new tool is a total game changer \u2014 revolutionary, you won't believe the insane results. github.com/hypehouse/boostly",
+      "metrics": {
+        "views": 90000,
+        "likes": 3000,
+        "reposts": 400,
+        "replies": 60,
+        "quotes": 40,
+        "bookmarks": 300
+      },
+      "signals": {
+        "reach_ratio": 0.75,
+        "engagement_rate": 0.0389,
+        "velocity": 88.928,
+        "reply_like_ratio": 0.02,
+        "quote_repost_ratio": 0.1,
+        "bookmark_rate": 0.0033,
+        "spread": 440
+      },
+      "repo_url": "https://github.com/hypehouse/boostly",
+      "dedup_key": "github.com/hypehouse/boostly",
+      "brand_flags": [
+        "game changer",
+        "revolutionary",
+        "you won't believe",
+        "insane results"
+      ],
+      "other_source_urls": []
+    },
+    {
+      "score": 0.0733,
+      "score_raw": 0.279,
+      "age_decay": 0.263,
+      "top_drivers": [
+        "engagement",
+        "bookmarks"
+      ],
+      "author_tier": "macro",
+      "url": "https://x.com/quiet_quinn/status/1000000000000000007",
+      "author_handle": "quiet_quinn",
+      "author_followers": 60000,
+      "author_verified": true,
+      "posted_at": "Fri Sep 04 11:00:00 +0000 2026",
+      "age_hours": 69.4,
+      "text": "Released a small CLI helper today, nothing fancy but it scratches my own itch.",
+      "metrics": {
+        "views": 12000,
+        "likes": 300,
+        "reposts": 25,
+        "replies": 10,
+        "quotes": 5,
+        "bookmarks": 60
+      },
+      "signals": {
+        "reach_ratio": 0.2,
+        "engagement_rate": 0.0283,
+        "velocity": 4.8962,
+        "reply_like_ratio": 0.0333,
+        "quote_repost_ratio": 0.2,
+        "bookmark_rate": 0.005,
+        "spread": 30
+      },
+      "repo_url": null,
+      "dedup_key": "https://x.com/quiet_quinn/status/1000000000000000007",
+      "brand_flags": [],
+      "other_source_urls": []
+    }
+  ]
+}
