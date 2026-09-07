@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 Theo Popov
+# SPDX-License-Identifier: MIT
 """
 x-viral-tracker — X/Twitter viral-post tracker (deterministic stage).
 
